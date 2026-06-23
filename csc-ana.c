@@ -10,6 +10,10 @@
  *   rounded to the nearest integer through multiplicative and additive
  *   decomposition," arXiv e-prints arXiv:2605.21400v [cs.DS], May 2026.
  *   [Online]. Available: https://arxiv.org/abs/2605.21400
+ *
+ * \remarks Copyright (c) 2026 Kyeong Soo (Joseph) Kim
+ *
+ * \remarks SPDX-License-Identifier: MIT
  */
 
 #include <inttypes.h>
