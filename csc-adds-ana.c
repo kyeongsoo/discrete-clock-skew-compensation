@@ -1,5 +1,5 @@
 /**
- * \file csc-adds-ana2.c
+ * \file csc-adds-ana.c
  * Investigation of the effects of the offset (i.e., \td_i) transfer
  * in the additive decomposition of direct search (ADDS) algorithm.
  *
@@ -10,6 +10,10 @@
  *   rounded to the nearest integer through multiplicative and additive
  *   decomposition," arXiv e-prints arXiv:2605.21400v [cs.DS], May 2026.
  *   [Online]. Available: https://arxiv.org/abs/2605.21400
+ *
+ * \remarks Copyright (c) 2026 Kyeong Soo (Joseph) Kim
+ *
+ * \remarks SPDX-License-Identifier: MIT
  */
 
 #include <inttypes.h>
@@ -18,7 +22,6 @@
 #include <stdlib.h>
 #include "csc.h"
 #include "drand48.h"
-
 
 int main(int argc, char **argv)
 {
@@ -116,7 +119,7 @@ int main(int argc, char **argv)
 
         // store csc_errs for preprocessing in Python
         char filename[256];
-        snprintf(filename, sizeof(filename), "./out/csc-adds-ana2_%s_N%.0e.bin", int_type_str, (float)N);
+        snprintf(filename, sizeof(filename), "./out/csc-adds-ana_%s_N%.0e.bin", int_type_str, (float)N);
         FILE *fp = fopen(filename, "wb");
         if (fp) {
             fwrite(csc_errs, sizeof(csc_err), N_samples, fp);

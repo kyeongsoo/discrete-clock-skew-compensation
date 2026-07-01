@@ -10,17 +10,14 @@ OBJS = $(SRCS:.c=.o)
 SHARED_OBJS = csc.o
 
 # macro definitions
-# CFLAGS += -DCSC_INT_SIZE=4
-CFLAGS += -DCSC_INT_SIZE=8
+CFLAGS += -DCSC_INT_SIZE=4
+# CFLAGS += -DCSC_INT_SIZE=8
 # CFLAGS += -DCSC_INT_SIZE=16
 CFLAGS += -DDEBUG=1
 
 all: csc-adds-ana csc-ana csc-analysis csc-debug1 csc-debug2 csc-debug3
 
 csc-adds-ana: $(SHARED_OBJS) drand48.o csc-adds-ana.o
-	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
-
-csc-adds-ana2: $(SHARED_OBJS) drand48.o csc-adds-ana2.o
 	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 csc-ana: $(SHARED_OBJS) drand48.o csc-ana.o
