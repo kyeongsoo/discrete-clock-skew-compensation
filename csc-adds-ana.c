@@ -2,13 +2,14 @@
  * \file csc-adds-ana2.c
  * Investigation of the effects of the offset (i.e., \td_i) transfer
  * in the additive decomposition of direct search (ADDS) algorithm.
- * 
+ *
  * \author Kyeong Soo (Joseph) Kim <kyeongsoo.kim@gmail.com>
- * 
- * \remarks The results are to be published in the following paper:
- * - Kyeong Soo Kim, "Decomposition of Integer Division Rounded to the Nearest
- *   Integer: Space-Time Trade-off in Clock Skew Compensation," to be submitted
- *   to IEEE Trans. Singal Process., Apr. 2026.
+ *
+ * \remarks The results are published in the following paper:
+ * - Kyeong Soo Kim, "Space-time trade-off in integer linear scaling
+ *   rounded to the nearest integer through multiplicative and additive
+ *   decomposition," arXiv e-prints arXiv:2605.21400v [cs.DS], May 2026.
+ *   [Online]. Available: https://arxiv.org/abs/2605.21400
  */
 
 #include <inttypes.h>
@@ -84,7 +85,7 @@ int main(int argc, char **argv)
             b512_result = csc_b512(i, D, A);
             for (int a = 0; a < N_algs; a++) {
                 j = csc_algs[a](i, D, A, N);
-                
+
                 // CSC error
                 csc_err = b512_result - j;
                 if (a == 1) {

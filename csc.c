@@ -9,10 +9,11 @@
  * - CSC_NO_ITER_COUNT: Turn off iteration couting in iterative algorithms.
  * - CSC_NO_DIV_CHECK: Turn off checking the value of 'A' in division algorithms.
  *
- * \remarks The results are to be published in the following paper:
- * - Kyeong Soo Kim, "Decomposition of Integer Division Rounded to the Nearest
- *   Integer: Space-Time Trade-off in Clock Skew Compensation," to be submitted
- *   to IEEE Trans. Singal Process., Apr. 2026.
+ * \remarks The results are published in the following paper:
+ * - Kyeong Soo Kim, "Space-time trade-off in integer linear scaling
+ *   rounded to the nearest integer through multiplicative and additive
+ *   decomposition," arXiv e-prints arXiv:2605.21400v [cs.DS], May 2026.
+ *   [Online]. Available: https://arxiv.org/abs/2605.21400
  */
 
 #include <assert.h>
